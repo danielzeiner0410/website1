@@ -1,5 +1,5 @@
 # Site settings
-baseURL = "http://example.org/"
+baseURL = "https://zealous-hamilton-95c6d9.netlify.app/"
 languageCode = "en-us"
 title = "Portfolio website of Daniel Zeiner"
 theme = "forty"
@@ -20,7 +20,7 @@ disqusShortname = ""
 
   # Provide your metadata here.
   name = "Daniel Zeiner"
-  description = "LBS MFA student"
+  description = ""
 
   # Link custom assets relative to /static
   custom_css = []
@@ -37,8 +37,8 @@ disqusShortname = ""
 
   # Navigation Section
   [params.navigation]
-    title = "Portfolio"
-    subtitle = "Project 1"
+    title = "Daniel Zeiner"
+    subtitle = "Portfolio website"
     menu = "Menu"
     # Optional logo as brand stored in img/
     # logo = "logo.png"
@@ -51,13 +51,13 @@ disqusShortname = ""
       name = "Blogs"
       url = "blogs"
 
-    [[params.navigation.links]]
-      name = "Generic Blog"
-      url = "blogs/ipsum"
+#    [[params.navigation.links]]
+#      name = "Generic Blog"
+#      url = "blogs/ipsum"
 
-    [[params.navigation.links]]
-      name = "Elements"
-      url = "elements.html"
+#    [[params.navigation.links]]
+#      name = "Elements"
+#      url = "elements.html"
 
     # Add custom links here by uncommenting code below. To remove links just delete
     # the [[params.navigation.links]] map associated with that link. Copy and paste
@@ -68,7 +68,7 @@ disqusShortname = ""
 
     # Button Style 1
     [[params.navigation.button1]]
-      name = "Get Started"
+      name = "My projects"
       url = "blogs"
 
     # Button Style 2
@@ -92,8 +92,8 @@ disqusShortname = ""
     # Display your showcases here.
     
     [[params.tiles.showcase]]
-      title = "Aliquam"
-      subtitle = "Ipsum Dolor Sit Amet"
+      title = "About myselve"
+      subtitle = "CV"
       image = "pic01.jpg"
       url = "blogs/aliquam"
 
@@ -109,17 +109,17 @@ disqusShortname = ""
       image = "pic03.jpg"
       url = "blogs/magna"
 
-#    [[params.tiles.showcase]]
-#      title = "Ipsum"
-#      subtitle = "Nisl Sed Aliquam"
-#      image = "pic04.jpg"
-#      url = "blogs/ipsum"
+    [[params.tiles.showcase]]
+      title = "Ipsum"
+      subtitle = "Nisl Sed Aliquam"
+      image = "pic04.jpg"
+      url = "blogs/ipsum"
 
- #   [[params.tiles.showcase]]
-#      title = "Consequat"
-#      subtitle = "Ipsum Dolor Sit Amet"
-#      image = "pic05.jpg"
-#      url = "blogs/ipsum"
+    [[params.tiles.showcase]]
+      title = "Consequat"
+      subtitle = "Ipsum Dolor Sit Amet"
+      image = "pic05.jpg"
+      url = "blogs/ipsum"
 
     [[params.tiles.showcase]]
       title = "Etiam"
@@ -136,16 +136,16 @@ disqusShortname = ""
     # To add more blogs just copy and paste the code.
 
   # Section Type Two
-  [params.two]
-    enable = true
-    title = "Massa libero"
-    subtitle = """Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. 
-    Mauris aliquet magna magna sed nunc rhoncus pharetra. 
-    Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. 
-    Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero.
-    Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus."""
-    buttonText = "Get Started"
-    url = "blogs"
+#  [params.two]
+#    enable = true
+#    title = "Massa libero"
+#    subtitle = """Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. 
+#    Mauris aliquet magna magna sed nunc rhoncus pharetra. 
+#    Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. 
+#    Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero.
+#    Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus."""
+#    buttonText = "Get Started"
+#    url = "blogs"
 
 
   # Contact section
