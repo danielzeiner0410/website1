@@ -72,9 +72,9 @@ disqusShortname = ""
       url = "blogs"
 
     # Button Style 2
-    [[params.navigation.button2]]
-      name = "Log In"
-      url = "#"
+#    [[params.navigation.button2]]
+#      name = "Log In"
+#      url = "#"
 
 
   # Banner section
@@ -92,16 +92,16 @@ disqusShortname = ""
     # Display your showcases here.
     
     [[params.tiles.showcase]]
-      title = "About myselve"
+      title = "Personal information"
       subtitle = "CV"
       image = "pic01.jpg"
-      url = "blogs/aliquam"
+      url = "blogs/blog1"
 
     [[params.tiles.showcase]]
-      title = "Tempus"
-      subtitle = "Feugiat Amet Tempus"
+      title = "Mask acceptance"
+      subtitle = "NYT Survey analysis"
       image = "pic02.jpg"
-      url = "blogs/tempus"
+      url = "blogs/blog4"
 
     [[params.tiles.showcase]]
       title = "Magna"
