@@ -95,13 +95,13 @@ disqusShortname = ""
       title = "Personal information"
       subtitle = "CV"
       image = "pic01.jpg"
-      url = "blogs/blog1"
+      url = "post/CV"
 
     [[params.tiles.showcase]]
       title = "Mask acceptance"
       subtitle = "NYT Survey analysis"
       image = "pic02.jpg"
-      url = "blogs/blog4"
+      url = "blogs/blog-5"
 
     [[params.tiles.showcase]]
       title = "Magna"
@@ -115,13 +115,13 @@ disqusShortname = ""
       image = "pic04.jpg"
       url = "blogs/ipsum"
 
-    [[params.tiles.showcase]]
+#    [[params.tiles.showcase]]
 #      title = "Consequat"
 #      subtitle = "Ipsum Dolor Sit Amet"
 #      image = "pic05.jpg"
 #      url = "blogs/ipsum"
 
-    [[params.tiles.showcase]]
+#    [[params.tiles.showcase]]
 #      title = "Etiam"
 #      subtitle = "Feugiat Amet Tempus"
 #      image = "pic06.jpg"
