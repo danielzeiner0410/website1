@@ -95,7 +95,7 @@ disqusShortname = ""
       title = "Personal information"
       subtitle = "CV"
       image = "pic01.jpg"
-      url = "post/CV"
+      url = "CV"
 
     [[params.tiles.showcase]]
       title = "Mask acceptance"
