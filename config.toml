@@ -1,5 +1,5 @@
 # Site settings
-baseURL = "https://zealous-hamilton-95c6d9.netlify.app/"
+baseURL = "https://https://danielzeinerportfolio.netlify.app"
 languageCode = "en-us"
 title = "Portfolio website of Daniel Zeiner"
 theme = "forty"
