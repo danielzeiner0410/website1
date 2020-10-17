@@ -66,10 +66,10 @@ disqusShortname = ""
     #    name = "NameOfLink"
     #    url = "UrlOfLink"
 
-    # Button Style 1
-    # [[params.navigation.button1]]
-    # name = "My projects"
-    # url = "blogs"
+     Button Style 1
+     [[params.navigation.button1]]
+     name = "Download my CV"
+     url = "Documents/CV_Zeiner.pdf"
  
     # Button Style 2
 #    [[params.navigation.button2]]
@@ -93,7 +93,7 @@ disqusShortname = ""
     
     [[params.tiles.showcase]]
       title = "About me"
-      subtitle = "Backround, Interests and CV"
+      subtitle = "Backround, Interests and experience"
       image = "Me.jpg"
       url = "pages/aboutme/aboutme"
 
