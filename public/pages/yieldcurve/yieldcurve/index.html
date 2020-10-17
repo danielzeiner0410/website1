@@ -264,8 +264,6 @@ The first thing would be to join this dataframe df with the dataframe mylookup s
 <h2>Plotting the yield curve</h2>
 <div id="yields-on-us-rates-by-duration-since-1960" class="section level3">
 <h3>Yields on US rates by duration since 1960</h3>
-<pre class="r"><code>knitr::include_graphics(here::here(&quot;images&quot;, &quot;yield_curve1.png&quot;), error = FALSE)</code></pre>
-<p><img src="/Users/danielzeiner/Desktop/Uni/LBS/R Coding/website1/images/yield_curve1.png" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>yield_curve %&gt;%  
   ggplot(aes(x = date, y = price, color = var)) +
   geom_line() +
@@ -279,8 +277,6 @@ The first thing would be to join this dataframe df with the dataframe mylookup s
 </div>
 <div id="monthly-yields-on-us-rates-by-duration-since-1999-on-a-year-by-year-basis" class="section level3">
 <h3>Monthly yields on US rates by duration since 1999 on a year-by-year basis</h3>
-<pre class="r"><code>knitr::include_graphics(here::here(&quot;images&quot;, &quot;yield_curve2.png&quot;), error = FALSE)</code></pre>
-<p><img src="/Users/danielzeiner/Desktop/Uni/LBS/R Coding/website1/images/yield_curve2.png" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>yield_curve %&gt;% 
   filter(year(date) &gt;= 1999) %&gt;% 
   ggplot(aes(x = maturity, y = price, color = year(date), group=month(date))) +
@@ -295,8 +291,6 @@ The first thing would be to join this dataframe df with the dataframe mylookup s
 </div>
 <div id="month-and-10-year-yields-since-1999" class="section level3">
 <h3>3-month and 10-year yields since 1999</h3>
-<pre class="r"><code>knitr::include_graphics(here::here(&quot;images&quot;, &quot;yield_curve3.png&quot;), error = FALSE)</code></pre>
-<p><img src="/Users/danielzeiner/Desktop/Uni/LBS/R Coding/website1/images/yield_curve3.png" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>yield_curve %&gt;% 
   filter(year(date) &gt;= 1999,
          maturity %in% c(&quot;3m&quot;, &quot;10y&quot;)) %&gt;% 
@@ -319,23 +313,7 @@ recessions &lt;- tibble(
   )  %&gt;% 
   mutate(From = ymd(from), 
          To=ymd(to),
-         duration_days = To-From)
-
-recessions</code></pre>
-<pre><code>## # A tibble: 11 x 5
-##    from       to         From       To         duration_days
-##    &lt;chr&gt;      &lt;chr&gt;      &lt;date&gt;     &lt;date&gt;     &lt;drtn&gt;       
-##  1 1948-11-01 1949-10-01 1948-11-01 1949-10-01 334 days     
-##  2 1953-07-01 1954-05-01 1953-07-01 1954-05-01 304 days     
-##  3 1957-08-01 1958-04-01 1957-08-01 1958-04-01 243 days     
-##  4 1960-04-01 1961-02-01 1960-04-01 1961-02-01 306 days     
-##  5 1969-12-01 1970-11-01 1969-12-01 1970-11-01 335 days     
-##  6 1973-11-01 1975-03-01 1973-11-01 1975-03-01 485 days     
-##  7 1980-01-01 1980-07-01 1980-01-01 1980-07-01 182 days     
-##  8 1981-07-01 1982-11-01 1981-07-01 1982-11-01 488 days     
-##  9 1990-07-01 1991-03-01 1990-07-01 1991-03-01 243 days     
-## 10 2001-03-01 2001-11-01 2001-03-01 2001-11-01 245 days     
-## 11 2007-12-01 2009-06-01 2007-12-01 2009-06-01 548 days</code></pre>
+         duration_days = To-From)</code></pre>
 <pre class="r"><code>diff_df &lt;- yield_curve %&gt;%
   select(date, price, maturity) %&gt;% 
    pivot_wider(

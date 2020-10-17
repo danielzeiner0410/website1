@@ -111,11 +111,6 @@ yield_curve <-left_join(df,mylookup,by="symbol")
 
 ### Yields on US rates by duration since 1960
 
-```{r yields since 1969}
-knitr::include_graphics(here::here("images", "yield_curve1.png"), error = FALSE)
-```
-
-
 ```{r yields graph}
 yield_curve %>%  
   ggplot(aes(x = date, y = price, color = var)) +
@@ -130,10 +125,6 @@ yield_curve %>%
 
 
 ### Monthly yields on US rates by duration since 1999 on a year-by-year basis
-
-```{r yields since 1999}
-knitr::include_graphics(here::here("images", "yield_curve2.png"), error = FALSE)
-```
 
 ```{r graph2}
 yield_curve %>% 
@@ -150,10 +141,6 @@ yield_curve %>%
 
 
 ### 3-month and 10-year yields since 1999
-
-```{r yield 1999 2}
-knitr::include_graphics(here::here("images", "yield_curve3.png"), error = FALSE)
-```
 
 ```{r graph3}
 yield_curve %>% 
@@ -184,8 +171,6 @@ recessions <- tibble(
   mutate(From = ymd(from), 
          To=ymd(to),
          duration_days = To-From)
-
-recessions
 ```
 
 ```{r recession graph}
