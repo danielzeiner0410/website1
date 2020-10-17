@@ -5,7 +5,7 @@ categories:
 description: Analysis of US yield curve
 draft: false
 keywords: ""
-slug: climatechange
+slug: yieldcurve
 title: Yield curve inversion is viewed as a harbinger of recession
 subtitle: Can the yield curve predict recessions?
 ---
@@ -49,7 +49,7 @@ In addition, many articles and commentators think that, e.g., Yield curve invers
 In our case we will look at US data and use the FRED database to download historical yield curve rates, and plot the yield curves since 1999 to see when the yield curves flatten. 
 
 First, we will use the tidyquant package to download monthly rates for different durations.
-```{r}
+```{r mothly rates}
 # Get a list of FRED codes for US rates and US yield curve; choose monthly frequency
 # to see, eg., the 3-month T-bill https://fred.stlouisfed.org/series/TB3MS
 tickers <- c('TB3MS', # 3-month Treasury bill (or T-bill)
@@ -89,7 +89,7 @@ mylookup %>%
   knitr::kable()
 ```
 
-```{r}
+```{r glimps}
 df <- tickers %>% tidyquant::tq_get(get="economic.data", 
                    from="1960-01-01")   # start from January 1960
 
@@ -103,7 +103,7 @@ Our dataframe df has three columns (variables):
 * price: the actual yield on that date
 The first thing would be to join this dataframe df with the dataframe mylookup so we have a more readable version of maturities, durations, etc.
 
-```{r}
+```{r leftjoin}
 yield_curve <-left_join(df,mylookup,by="symbol") 
 ```
 
@@ -111,12 +111,12 @@ yield_curve <-left_join(df,mylookup,by="symbol")
 
 ### Yields on US rates by duration since 1960
 
-```{r}
+```{r yields since 1969}
 knitr::include_graphics(here::here("images", "yield_curve1.png"), error = FALSE)
 ```
 
 
-```{r}
+```{r yields graph}
 yield_curve %>%  
   ggplot(aes(x = date, y = price, color = var)) +
   geom_line() +
@@ -131,11 +131,11 @@ yield_curve %>%
 
 ### Monthly yields on US rates by duration since 1999 on a year-by-year basis
 
-```{r}
+```{r yields since 1999}
 knitr::include_graphics(here::here("images", "yield_curve2.png"), error = FALSE)
 ```
 
-```{r}
+```{r graph2}
 yield_curve %>% 
   filter(year(date) >= 1999) %>% 
   ggplot(aes(x = maturity, y = price, color = year(date), group=month(date))) +
@@ -151,11 +151,11 @@ yield_curve %>%
 
 ### 3-month and 10-year yields since 1999
 
-```{r}
+```{r yield 1999 2}
 knitr::include_graphics(here::here("images", "yield_curve3.png"), error = FALSE)
 ```
 
-```{r}
+```{r graph3}
 yield_curve %>% 
   filter(year(date) >= 1999,
          maturity %in% c("3m", "10y")) %>% 
@@ -173,7 +173,7 @@ According to Wikipedia’s list of recession in the United States, since 1999 th
 
 Besides calculating the spread (10year - 3months), there are a few things we need to do to produce our final plot
 
-```{r}
+```{r recession}
 # get US recession dates after 1946 from Wikipedia 
 # https://en.wikipedia.org/wiki/List_of_recessions_in_the_United_States
 
@@ -188,7 +188,7 @@ recessions <- tibble(
 recessions
 ```
 
-```{r}
+```{r recession graph}
 diff_df <- yield_curve %>%
   select(date, price, maturity) %>% 
    pivot_wider(
