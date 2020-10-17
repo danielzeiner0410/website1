@@ -48,8 +48,8 @@ disqusShortname = ""
       url = "#"
 
     [[params.navigation.links]]
-      name = "Blogs"
-      url = "blogs"
+      name = "About me"
+      url = "pages/about_me"
 
 #    [[params.navigation.links]]
 #      name = "Generic Blog"
@@ -67,10 +67,10 @@ disqusShortname = ""
     #    url = "UrlOfLink"
 
     # Button Style 1
-    [[params.navigation.button1]]
-      name = "My projects"
-      url = "blogs"
-
+    # [[params.navigation.button1]]
+    # name = "My projects"
+    # url = "blogs"
+ 
     # Button Style 2
 #    [[params.navigation.button2]]
 #      name = "Log In"
@@ -81,9 +81,9 @@ disqusShortname = ""
   [params.banner]
     # To change the background image on the homepage banner, replace 'banner.jpg' in
     # the 'static/img' folder.
-    title = "Hi, my name is Daniel Zeiner"
-    subtitle = "My portfolio website"
-    buttonText = "Get Started"
+    title = "Hi, my name is Daniel"
+    subtitle = "Find out more about me and learn about my projects in Data Analytics"
+    buttonText = "Find out about me"
 
 
   # Tiles Section
@@ -92,10 +92,10 @@ disqusShortname = ""
     # Display your showcases here.
     
     [[params.tiles.showcase]]
-      title = "Personal information"
-      subtitle = "CV"
+      title = "About me"
+      subtitle = "Backround, Interests and CV"
       image = "CV.jpg"
-      url = "CV"
+      url = "pages/about_me"
 
     [[params.tiles.showcase]]
       title = "Mask acceptance"
@@ -136,16 +136,16 @@ disqusShortname = ""
     # To add more blogs just copy and paste the code.
 
   # Section Type Two
-#  [params.two]
-#    enable = true
-#    title = "Massa libero"
+  [params.two]
+    enable = true
+    title = "Welcome to my website"
 #    subtitle = """Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. 
-#    Mauris aliquet magna magna sed nunc rhoncus pharetra. 
+    I first of all want to mention that I am really happy that you found the way to my website. I will try to show you my developments in R, which I learn extensively at LBS. I will further try to update you about major events in my life and post interesting articles about the financial world in my blog.  
 #    Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. 
 #    Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero.
 #    Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus."""
-#    buttonText = "Get Started"
-#    url = "blogs"
+    buttonText = "Read my blog"
+    url = "blogs"
 
 
   # Contact section
