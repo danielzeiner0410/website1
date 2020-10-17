@@ -139,8 +139,7 @@ disqusShortname = ""
   [params.two]
     enable = true
     title = "Welcome to my website"
-#    subtitle = """Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. 
-    I first of all want to mention that I am really happy that you found the way to my website. I will try to show you my developments in R, which I learn extensively at LBS. I will further try to update you about major events in my life and post interesting articles about the financial world in my blog.  
+    subtitle = """I first of all want to mention that I am really happy that you found the way to my website. I will try to show you my developments in R, which I learn extensively at LBS. I will further try to update you about major events in my life and post interesting articles about the financial world in my blog."""
 #    Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. 
 #    Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero.
 #    Mauris aliquet magna magna sed nunc rhoncus amet pharetra et feugiat tempus."""
