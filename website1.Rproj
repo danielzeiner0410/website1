@@ -13,4 +13,4 @@ RnwWeave: Sweave
 LaTeX: pdfLaTeX
 
 BuildType: Website
-WebsitePath: content/pages
+WebsitePath: ~/Desktop/Uni/LBS/R Coding/website1

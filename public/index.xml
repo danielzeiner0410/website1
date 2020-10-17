@@ -2,56 +2,88 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Portfolio website of Daniel Zeiner</title>
-    <link>/</link>
+    <link>https://danielzeinerportfolio.netlify.app/</link>
     <description>Recent content on Portfolio website of Daniel Zeiner</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 31 Oct 2017 22:42:51 -0500</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 17 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://danielzeinerportfolio.netlify.app/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Aliquam</title>
-      <link>/blogs/aliquam/</link>
-      <pubDate>Tue, 31 Oct 2017 22:42:51 -0500</pubDate>
+      <title>Alcohol consumption</title>
+      <link>https://danielzeinerportfolio.netlify.app/pages/alcoholconsumption/</link>
+      <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blogs/aliquam/</guid>
-      <description></description>
+      <guid>https://danielzeinerportfolio.netlify.app/pages/alcoholconsumption/</guid>
+      <description>Alcohol all around the world - where do people drink the most alcohol? While some people might argue that drinking alcohol can provide several health benefits, others believe that you should never drink at all. Regardless of this discussion, where do people drink the most alcohol? And how does this differ by alcohol type. The following visualizations provide answers on regional trends for alcohol preference:</description>
     </item>
     
     <item>
-      <title>Tempus</title>
-      <link>/blogs/tempus/</link>
-      <pubDate>Tue, 31 Oct 2017 22:26:13 -0500</pubDate>
+      <title>Alcohol consumption</title>
+      <link>https://danielzeinerportfolio.netlify.app/pages/alcoholconsumption/alcoholconsumption/</link>
+      <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blogs/tempus/</guid>
-      <description></description>
+      <guid>https://danielzeinerportfolio.netlify.app/pages/alcoholconsumption/alcoholconsumption/</guid>
+      <description>Alcohol all around the world - where do people drink the most alcohol? While some people might argue that drinking alcohol can provide several health benefits, others believe that you should never drink at all. Regardless of this discussion, where do people drink the most alcohol? And how does this differ by alcohol type. The following visualizations provide answers on regional trends for alcohol preference:</description>
     </item>
     
     <item>
-      <title>Magna</title>
-      <link>/blogs/magna/</link>
-      <pubDate>Tue, 31 Oct 2017 22:26:09 -0500</pubDate>
+      <title>CV</title>
+      <link>https://danielzeinerportfolio.netlify.app/cv/</link>
+      <pubDate>Mon, 05 Oct 2020 00:00:00 +0000</pubDate>
       
-      <guid>/blogs/magna/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ipsum</title>
-      <link>/blogs/ipsum/</link>
-      <pubDate>Tue, 31 Oct 2017 21:28:43 -0500</pubDate>
-      
-      <guid>/blogs/ipsum/</guid>
-      <description>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis magna sed nunc rhoncus condimentum sem. In efficitur ligula tate urna. Maecenas massa sed magna lacinia magna pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis tempus.</description>
+      <guid>https://danielzeinerportfolio.netlify.app/cv/</guid>
+      <description>Hi, I am Daniel from Austria. I have studied my undergrad in Vienna &amp;amp; recently started with my masters degree in London at LBS. Regarding my professional experience I was able to gain insights both in Consulting and Investment banking and seek for a career in Finance in the long-term.
+In my free time I love to climb mountains, play volleyball, tennis or golf with friends, and of course to join social gatherings such as parties &amp;amp; game nights.</description>
     </item>
     
     <item>
       <title>Hello R Markdown</title>
-      <link>/post/2015-07-23-r-rmarkdown/</link>
+      <link>https://danielzeinerportfolio.netlify.app/post/2015-07-23-r-rmarkdown/</link>
       <pubDate>Thu, 23 Jul 2015 21:13:14 -0500</pubDate>
       
-      <guid>/post/2015-07-23-r-rmarkdown/</guid>
+      <guid>https://danielzeinerportfolio.netlify.app/post/2015-07-23-r-rmarkdown/</guid>
       <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
 You can embed an R code chunk like this:
 summary(cars) ## speed dist ## Min. : 4.0 Min. : 2.00 ## 1st Qu.:12.0 1st Qu.: 26.00 ## Median :15.0 Median : 36.00 ## Mean :15.4 Mean : 42.98 ## 3rd Qu.</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>https://danielzeinerportfolio.netlify.app/blogs/aboutme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danielzeinerportfolio.netlify.app/blogs/aboutme/</guid>
+      <description>I’m an Financial Analysis (MFA) student at London Business School (2021).
+I have done my undergrad at the Vienna University of Business and Economics and due to my passion to mathematics, I also completed nearly half of the studies in Financial Mathematics besides my Business degree. I always was really keen to learn as much new things as possible &amp;amp; therefore constantly try to widen my horizon. LBS perfectly supports me with this objective, providing an environment with students from all over the world and first class lecturers.</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>https://danielzeinerportfolio.netlify.app/pages/aboutme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danielzeinerportfolio.netlify.app/pages/aboutme/</guid>
+      <description>I’m an Financial Analysis (MFA) student at London Business School (2021).
+I have done my undergrad at the Vienna University of Business and Economics and due to my passion to mathematics, I also completed nearly half of the studies in Financial Mathematics besides my Business degree. I always was really keen to learn as much new things as possible &amp;amp; therefore constantly try to widen my horizon. LBS perfectly supports me with this objective, providing an environment with students from all over the world and first class lecturers.</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>https://danielzeinerportfolio.netlify.app/pages/aboutme/aboutme/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danielzeinerportfolio.netlify.app/pages/aboutme/aboutme/</guid>
+      <description>I’m an Financial Analysis (MFA) student at London Business School (2021).
+I have done my undergrad at the Vienna University of Business and Economics and due to my passion to mathematics, I also completed nearly half of the studies in Financial Mathematics besides my Business degree. I always was really keen to learn as much new things as possible &amp;amp; therefore constantly try to widen my horizon. LBS perfectly supports me with this objective, providing an environment with students from all over the world and first class lecturers.</description>
+    </item>
+    
+    <item>
+      <title>CV</title>
+      <link>https://danielzeinerportfolio.netlify.app/post/cv/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danielzeinerportfolio.netlify.app/post/cv/</guid>
+      <description>R Markdown This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.
+When you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:</description>
     </item>
     
   </channel>
