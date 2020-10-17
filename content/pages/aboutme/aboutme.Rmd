@@ -1,5 +1,5 @@
 ---
-slug: "index"
+slug: aboutme
 title: "About me"
 output: html_document
 ---
