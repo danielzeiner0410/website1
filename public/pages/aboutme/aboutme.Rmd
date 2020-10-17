@@ -8,13 +8,12 @@ keywords: aboutme
 slug: aboutme
 ---
 
+![](Me.jpg)
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
-![](Me.jpg)
-
 
 I’m an Financial Analysis (MFA) student at London Business School (2021). 
 
