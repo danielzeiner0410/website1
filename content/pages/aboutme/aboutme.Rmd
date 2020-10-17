@@ -6,6 +6,7 @@ image: Me.jpg
 keywords: aboutme
 slug: aboutme
 draft: no
+output: html_document
 ---
 
 ```{r aboutme1, include=FALSE}
