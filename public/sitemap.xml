@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://danielzeinerportfolio.netlify.app/pages/alcoholconsumption/</loc>
-    <lastmod>2020-10-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://danielzeinerportfolio.netlify.app/pages/alcoholconsumption/alcoholconsumption/</loc>
     <lastmod>2020-10-17T00:00:00+00:00</lastmod>
   </url>
@@ -20,11 +15,6 @@
   <url>
     <loc>https://danielzeinerportfolio.netlify.app/</loc>
     <lastmod>2020-10-17T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://danielzeinerportfolio.netlify.app/cv/</loc>
-    <lastmod>2020-10-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -68,23 +58,15 @@
   </url>
   
   <url>
-    <loc>https://danielzeinerportfolio.netlify.app/blogs/aboutme/</loc>
-  </url>
-  
-  <url>
-    <loc>https://danielzeinerportfolio.netlify.app/pages/aboutme/</loc>
-  </url>
-  
-  <url>
     <loc>https://danielzeinerportfolio.netlify.app/pages/aboutme/aboutme/</loc>
   </url>
   
   <url>
-    <loc>https://danielzeinerportfolio.netlify.app/blogs/</loc>
+    <loc>https://danielzeinerportfolio.netlify.app/post/cv/</loc>
   </url>
   
   <url>
-    <loc>https://danielzeinerportfolio.netlify.app/post/cv/</loc>
+    <loc>https://danielzeinerportfolio.netlify.app/pages/climatechange/climatechange/</loc>
   </url>
   
 </urlset>

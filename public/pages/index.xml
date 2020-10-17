@@ -9,30 +9,11 @@
     <lastBuildDate>Sat, 17 Oct 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://danielzeinerportfolio.netlify.app/pages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Alcohol consumption</title>
-      <link>https://danielzeinerportfolio.netlify.app/pages/alcoholconsumption/</link>
-      <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://danielzeinerportfolio.netlify.app/pages/alcoholconsumption/</guid>
-      <description>Alcohol all around the world - where do people drink the most alcohol? While some people might argue that drinking alcohol can provide several health benefits, others believe that you should never drink at all. Regardless of this discussion, where do people drink the most alcohol? And how does this differ by alcohol type. The following visualizations provide answers on regional trends for alcohol preference:</description>
-    </item>
-    
-    <item>
-      <title>Alcohol consumption</title>
       <link>https://danielzeinerportfolio.netlify.app/pages/alcoholconsumption/alcoholconsumption/</link>
       <pubDate>Sat, 17 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://danielzeinerportfolio.netlify.app/pages/alcoholconsumption/alcoholconsumption/</guid>
       <description>Alcohol all around the world - where do people drink the most alcohol? While some people might argue that drinking alcohol can provide several health benefits, others believe that you should never drink at all. Regardless of this discussion, where do people drink the most alcohol? And how does this differ by alcohol type. The following visualizations provide answers on regional trends for alcohol preference:</description>
-    </item>
-    
-    <item>
-      <title>About me</title>
-      <link>https://danielzeinerportfolio.netlify.app/pages/aboutme/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://danielzeinerportfolio.netlify.app/pages/aboutme/</guid>
-      <description>I’m an Financial Analysis (MFA) student at London Business School (2021).
-I have done my undergrad at the Vienna University of Business and Economics and due to my passion to mathematics, I also completed nearly half of the studies in Financial Mathematics besides my Business degree. I always was really keen to learn as much new things as possible &amp;amp; therefore constantly try to widen my horizon. LBS perfectly supports me with this objective, providing an environment with students from all over the world and first class lecturers.</description>
     </item>
     
     <item>
@@ -43,6 +24,18 @@ I have done my undergrad at the Vienna University of Business and Economics and 
       <guid>https://danielzeinerportfolio.netlify.app/pages/aboutme/aboutme/</guid>
       <description>I’m an Financial Analysis (MFA) student at London Business School (2021).
 I have done my undergrad at the Vienna University of Business and Economics and due to my passion to mathematics, I also completed nearly half of the studies in Financial Mathematics besides my Business degree. I always was really keen to learn as much new things as possible &amp;amp; therefore constantly try to widen my horizon. LBS perfectly supports me with this objective, providing an environment with students from all over the world and first class lecturers.</description>
+    </item>
+    
+    <item>
+      <title>Our planet gets warmer and warmer</title>
+      <link>https://danielzeinerportfolio.netlify.app/pages/climatechange/climatechange/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danielzeinerportfolio.netlify.app/pages/climatechange/climatechange/</guid>
+      <description>Climate change and temperature anomalies The whole world is talking about climate change and global warming. Let’s look at the data from Combined Land-Surface Air and Sea-Surface Water Temperature Anomalies in the Northern Hemisphere at NASA’s Goddard Institute for Space Studies and analyze if the data confirms global warming.
+Loading, inspecting and selecting data Loading data
+As first step, I load the data with the function read_csv().
+#I use: data on the *Combined Land-Surface Air and Sea-Surface Water Temperature Anomalies* in the Northern Hemisphere at [NASA&amp;#39;s Goddard Institute for Space Studies](https://data.</description>
     </item>
     
   </channel>

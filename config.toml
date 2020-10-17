@@ -104,10 +104,10 @@ disqusShortname = ""
       url = "pages/alcoholconsumption/alcoholconsumption"
 
     [[params.tiles.showcase]]
-      title = "Magna"
-      subtitle = "Lorem Etiam Nullam"
-      image = "pic03.jpg"
-      url = "blogs/magna"
+      title = "Our planet gets warmer and warmer"
+      subtitle = "Climate Change and Temperature Analysis"
+      image = "climatechange.jpg"
+      url = "pages/climatechange/climatechange"
 
     [[params.tiles.showcase]]
       title = "Ipsum"
