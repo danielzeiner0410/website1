@@ -1,0 +1,228 @@
+---
+categories:
+- ""
+- ""
+description: Analysis of US yield curve
+draft: false
+keywords: ""
+slug: climatechange
+title: Yield curve inversion is viewed as a harbinger of recession
+subtitle: Can the yield curve predict recessions?
+---
+
+```{r, setup, include=FALSE}
+knitr::opts_chunk$set(
+  message = FALSE, 
+  warning = FALSE, 
+  tidy=FALSE,     # display code as typed
+  size="small")   # slightly smaller font for code
+options(digits = 3)
+# default figure size
+knitr::opts_chunk$set(
+  fig.width=8, 
+  fig.height=8,
+  fig.align = "center"
+)
+```
+
+```{r load-libraries, include=FALSE}
+library(tidyverse)  # Load ggplot2, dplyr, and all the other tidyverse packages
+library(mosaic)
+library(ggthemes)
+library(lubridate)
+library(here)
+library(skimr)
+library(janitor)
+library(httr)
+library(readxl)
+library(vroom)
+library(infer)
+library(patchwork)
+library(kableExtra)
+library(scales)
+```
+
+Every so often, we hear warnings from commentators on the “inverted yield curve” and its predictive power with respect to recessions. 
+
+In addition, many articles and commentators think that, e.g., Yield curve inversion is viewed as a harbinger of recession. One can always doubt whether inversions are truly a harbinger of recessions, and use the attached parable on yield curve inversions.
+
+In our case we will look at US data and use the FRED database to download historical yield curve rates, and plot the yield curves since 1999 to see when the yield curves flatten. 
+
+First, we will use the tidyquant package to download monthly rates for different durations.
+```{r}
+# Get a list of FRED codes for US rates and US yield curve; choose monthly frequency
+# to see, eg., the 3-month T-bill https://fred.stlouisfed.org/series/TB3MS
+tickers <- c('TB3MS', # 3-month Treasury bill (or T-bill)
+             'TB6MS', # 6-month
+             'GS1',   # 1-year
+             'GS2',   # 2-year, etc....
+             'GS3',
+             'GS5',
+             'GS7',
+             'GS10',
+             'GS20',
+             'GS30')  #.... all the way to the 30-year rate
+
+# Turn  FRED codes to human readable variables
+myvars <- c('3-Month Treasury Bill',
+            '6-Month Treasury Bill',
+            '1-Year Treasury Rate',
+            '2-Year Treasury Rate',
+            '3-Year Treasury Rate',
+            '5-Year Treasury Rate',
+            '7-Year Treasury Rate',
+            '10-Year Treasury Rate',
+            '20-Year Treasury Rate',
+            '30-Year Treasury Rate')
+
+maturity <- c('3m', '6m', '1y', '2y','3y','5y','7y','10y','20y','30y')
+
+# by default R will sort these maturities alphabetically; but since we want
+# to keep them in that exact order, we recast maturity as a factor 
+# or categorical variable, with the levels defined as we want
+maturity <- factor(maturity, levels = maturity)
+
+# Create a lookup dataset
+mylookup<-data.frame(symbol=tickers,var=myvars, maturity=maturity)
+# Take a look:
+mylookup %>% 
+  knitr::kable()
+```
+
+```{r}
+df <- tickers %>% tidyquant::tq_get(get="economic.data", 
+                   from="1960-01-01")   # start from January 1960
+
+glimpse(df)
+```
+
+Our dataframe df has three columns (variables):
+
+* symbol: the FRED database ticker symbol
+* date: already a date object
+* price: the actual yield on that date
+The first thing would be to join this dataframe df with the dataframe mylookup so we have a more readable version of maturities, durations, etc.
+
+```{r}
+yield_curve <-left_join(df,mylookup,by="symbol") 
+```
+
+## Plotting the yield curve
+
+### Yields on US rates by duration since 1960
+
+```{r}
+knitr::include_graphics(here::here("images", "yield_curve1.png"), error = FALSE)
+```
+
+
+```{r}
+yield_curve %>%  
+  ggplot(aes(x = date, y = price, color = var)) +
+  geom_line() +
+  facet_wrap(~ordered(yield_curve$var, myvars), ncol=2) +
+  guides(colour=FALSE) +
+  ylab("%") +
+  xlab("") +
+  labs(title="Yields on U.S. Treasury rates since 1960",
+       caption="Source: St. Louis Federal Reserve Economics Database (FRED)")
+```
+
+
+### Monthly yields on US rates by duration since 1999 on a year-by-year basis
+
+```{r}
+knitr::include_graphics(here::here("images", "yield_curve2.png"), error = FALSE)
+```
+
+```{r}
+yield_curve %>% 
+  filter(year(date) >= 1999) %>% 
+  ggplot(aes(x = maturity, y = price, color = year(date), group=month(date))) +
+  geom_line() +
+  facet_wrap(~year(date), ncol=4) +
+  guides(colour=FALSE) +
+  ylab("Yield (%)") +
+  xlab("Maturity") +
+  labs(title="US Yield Curve",
+       caption="Source: St. Louis Federal Reserve Economics Database (FRED)")
+```
+
+
+### 3-month and 10-year yields since 1999
+
+```{r}
+knitr::include_graphics(here::here("images", "yield_curve3.png"), error = FALSE)
+```
+
+```{r}
+yield_curve %>% 
+  filter(year(date) >= 1999,
+         maturity %in% c("3m", "10y")) %>% 
+  ggplot(aes(x = date, y = price, color = var)) +
+  geom_line() +
+  ylab("%") +
+  guides(color=guide_legend(title="")) +
+  labs(title="Yields on 3-month and 10-year US Treasury rates since 1999",
+       caption="Source: St. Louis Federal Reserve Economics Database (FRED)")
+```
+
+According to Wikipedia’s list of recession in the United States, since 1999 there have been two recession in the US: between Mar 2001–Nov 2001 and between Dec 2007–June 2009. Does the yield curve seem to flatten before these recessions? Can a yield curve flattening really mean a recession is coming in the US? Since 1999, when did short-term (3 months) yield more than longer term (10 years) debt?
+
+*The yield curve does flatten before each major recession. We can see in the graphs that the flattening of the yield curve does warn before each recession hits the US.We also notice that short term yielded more than long term during recession times, likely due to people being worried to invest in longer futures due to uncertainty.*
+
+Besides calculating the spread (10year - 3months), there are a few things we need to do to produce our final plot
+
+```{r}
+# get US recession dates after 1946 from Wikipedia 
+# https://en.wikipedia.org/wiki/List_of_recessions_in_the_United_States
+
+recessions <- tibble(
+  from = c("1948-11-01", "1953-07-01", "1957-08-01", "1960-04-01", "1969-12-01", "1973-11-01", "1980-01-01","1981-07-01", "1990-07-01", "2001-03-01", "2007-12-01"),  
+  to = c("1949-10-01", "1954-05-01", "1958-04-01", "1961-02-01", "1970-11-01", "1975-03-01", "1980-07-01", "1982-11-01", "1991-03-01", "2001-11-01", "2009-06-01") 
+  )  %>% 
+  mutate(From = ymd(from), 
+         To=ymd(to),
+         duration_days = To-From)
+
+recessions
+```
+
+```{r}
+diff_df <- yield_curve %>%
+  select(date, price, maturity) %>% 
+   pivot_wider(
+     names_from = maturity,
+     values_from = price
+     ) %>% 
+  mutate(diff = `10y` - `3m`)
+
+recessions_df <- data.frame(xmin = as.Date(recessions$from),
+                              xmax = as.Date(recessions$to),
+                              ymin = -Inf,
+                              ymax = Inf) %>% 
+  filter(year(xmin) > 1960, 
+         year(xmax) > 1960)
+
+diff_df %>% 
+  ggplot(aes(x=date, y=diff)) +
+  geom_line() +
+  geom_rug(aes(color=ifelse(diff<=0 ,"<=0 ",">0")),sides="b",show.legend = FALSE) +
+  ylab("Difference in 10 year - 3 month yield (%)") + 
+  labs(title="Yield Curve inversion: 10 year minus 3 month U.S. Treasury rates",
+       subtitle = "Difference in % points, monthly averages\nShaded ares correspond to recessions.") +
+  xlab("") +
+  geom_hline(yintercept=0) +
+    theme(legend.position=NULL,
+        plot.caption=element_text(hjust=0),
+        plot.subtitle=element_text(face="italic"),
+        plot.title=element_text(size=12,face="bold")) +
+  geom_ribbon(aes(x=date, y=diff, ymin=pmin(diff_df$diff,0), ymax=0), 
+              fill="red", col="red", alpha=0.2) +
+  geom_ribbon(aes(x=date, y=diff, ymin=0, ymax=pmax(diff_df$diff,0)), 
+              fill="green", col="green", alpha=0.2) +
+  geom_rect(data=recessions_df, inherit.aes=F,
+            mapping=aes(xmin=recessions_df$xmin, xmax=recessions_df$xmax, ymin=recessions_df$ymin, ymax=recessions_df$ymax), color='grey', alpha=0.2)
+```
+
+

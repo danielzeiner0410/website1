@@ -38,5 +38,16 @@ As first step, I load the data with the function read_csv().
 #I use: data on the *Combined Land-Surface Air and Sea-Surface Water Temperature Anomalies* in the Northern Hemisphere at [NASA&amp;#39;s Goddard Institute for Space Studies](https://data.</description>
     </item>
     
+    <item>
+      <title>Yield curve inversion is viewed as a harbinger of recession</title>
+      <link>https://danielzeinerportfolio.netlify.app/pages/yieldcurve/climatechange/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://danielzeinerportfolio.netlify.app/pages/yieldcurve/climatechange/</guid>
+      <description>Every so often, we hear warnings from commentators on the “inverted yield curve” and its predictive power with respect to recessions.
+In addition, many articles and commentators think that, e.g., Yield curve inversion is viewed as a harbinger of recession. One can always doubt whether inversions are truly a harbinger of recessions, and use the attached parable on yield curve inversions.
+In our case we will look at US data and use the FRED database to download historical yield curve rates, and plot the yield curves since 1999 to see when the yield curves flatten.</description>
+    </item>
+    
   </channel>
 </rss>
