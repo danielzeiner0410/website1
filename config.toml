@@ -101,7 +101,7 @@ disqusShortname = ""
       title = "How much do people drink around the world?"
       subtitle = "Analysis of drinking behaviour"
       image = "beer.jpg"
-      url = "pages/Alcohol_consumption"
+      url = "pages/alcoholconsumption/alcoholconsumption"
 
     [[params.tiles.showcase]]
       title = "Magna"

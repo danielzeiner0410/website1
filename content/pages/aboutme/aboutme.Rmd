@@ -6,12 +6,10 @@ date: '2020-15-10'
 image: Me.jpg
 keywords: aboutme
 slug: aboutme
-
-
-  
 ---
 
-```{r aboutme1, include=FALSE}
+
+```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 

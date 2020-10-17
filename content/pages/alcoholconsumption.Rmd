@@ -10,8 +10,6 @@ output:
     theme: forty
     toc: yes
     toc_float: yes
-  pdf_document:
-    toc: yes
 ---
 
 ```{r, setup, include = FALSE}
