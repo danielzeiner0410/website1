@@ -8,7 +8,7 @@ slug: aboutme
 draft: no
 ---
 
-```{r setup, include=FALSE}
+```{r aboutme1, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 

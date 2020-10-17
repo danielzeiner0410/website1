@@ -95,7 +95,7 @@ disqusShortname = ""
       title = "About me"
       subtitle = "Backround, Interests and CV"
       image = "Me.jpg"
-      url = "pages/aboutme/aboutme"
+      url = "pages/aboutme"
 
     [[params.tiles.showcase]]
       title = "How much do people drink around the world?"
