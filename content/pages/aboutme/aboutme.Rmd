@@ -1,8 +1,16 @@
 ---
+date: "2020-15-10"
+description: 
+draft: false
+image: Me.jpg
+keywords: "aboutme"
 slug: aboutme
-title: "About me"
-output: html_document
+title: About me
 ---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
 ![](Me.jpg)
 
