@@ -1,11 +1,11 @@
 ---
-date: "2020-15-10"
-description: 
-draft: false
+title: "About me"
+description: null
+date: '2020-15-10'
 image: Me.jpg
-keywords: "aboutme"
+keywords: aboutme
 slug: aboutme
-title: About me
+draft: no
 ---
 
 ```{r setup, include=FALSE}
