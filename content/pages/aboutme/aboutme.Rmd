@@ -1,12 +1,14 @@
 ---
+output: html_document
 title: "About me"
 description: null
 date: '2020-15-10'
 image: Me.jpg
 keywords: aboutme
 slug: aboutme
-draft: no
-output: html_document
+
+
+  
 ---
 
 ```{r aboutme1, include=FALSE}
